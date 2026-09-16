@@ -8,7 +8,7 @@ class Hash
   end
 
   def replace_unless_has!(value, at:, &closure)
-    self[at] = self[at] == value ? value : closure.call(self[at])
+    self[at] = self[at] == value ? value : closure.call(self[at]) # steep:ignore NoMethod
   end
 
   def rename_key!(old_name, new_name)

@@ -1,0 +1,9 @@
+class Hash[unchecked out K, unchecked out V]
+  def reject_value: () { (V value) -> boolish } -> Hash[K, V]
+
+  def reject_value!: () { (V value) -> boolish } -> self?
+
+  def replace_unless_has!: (V value, at: K & _Key) { (V actual) -> V } -> V
+
+  def rename_key!: (K & _Key old_name, K new_name) -> V
+end
