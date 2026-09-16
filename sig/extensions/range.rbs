@@ -1,0 +1,7 @@
+interface _RangeAdaptable[T]
+  def adapt_to_range: (Range[untyped] range) -> T
+end
+
+class Range[out Elem]
+  def *: [T] (_RangeAdaptable[T] other) -> T
+end
